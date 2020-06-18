@@ -8,15 +8,15 @@ class TierraMedia
 
     end
     
-    def agregar_reino(factory, rey, castillo, descripcion, numero_efectivos,cantidad)
+    def agregar_reino(factory, rey, castillo, descripcion, numero_efectivos)
 
 
 
-        for i in(1..cantidad)
+        
 
-            @lista_de_reinos.push(factory.create(rey, castillo, descripcion, numero_efectivos))
+        @lista_de_reinos.push(factory.create(rey, castillo, descripcion, numero_efectivos))
 
-        end
+
 
     end
 
@@ -107,7 +107,7 @@ fabrica_elfos = FabricaElfos.new
 fabrica_humanos = FabricaHumanos.new
 fabrica_orcos = FabricaOrcos.new 
 
-tierra_media.agregar_reino(fabrica_orcos, "Rey orco", "Castillo Orco", "Somos el mejor ejercito", 100, 3)
+tierra_media.agregar_reino(fabrica_orcos, "Rey orco", "Castillo Orco", "Somos el mejor ejercito", 100)
 
 for objeto in tierra_media.lista_de_reinos
 
